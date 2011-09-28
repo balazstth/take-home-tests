@@ -227,9 +227,6 @@ public class Field {
     
     //------------------------------------------------------------------------
     
-    /**
-     * Prints geoMap to the console if not overly large
-     */
     private StringBuffer[] stringGeo() {            
         StringBuffer[] rows = new StringBuffer[height];
         Q.Command NewSB = new Q.Command() {
@@ -255,6 +252,9 @@ public class Field {
         }
     }
     
+    /**
+     * Prints composite map to the console if not overly large
+     */
     public void printComposite() {
         if (width > 78 || height > 78) {
             Q.con("[map is too large to display, will not fit 78 x 78]");
